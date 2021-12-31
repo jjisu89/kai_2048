@@ -46,22 +46,28 @@ HTMLActuator.prototype.clearContainer = function (container) {
   }
 };
 
+const random_number = Math.floor(Math.random() * (7 - 0 + 1)) + 7;
+
 var val2caption = function(val){
 
-  const captions = [
-  "한아", //2
-  "진수", //4
-  "지수", //8
-  "용화", //16
-  "규석", //32
-  "동민", //64
-  "완상", //128
-  "재은", //256
-  "카이", //512
-  "스트", //1024
-  "수학", //2048
-  "대전", //4096
-];
+  const names = ["한아","진수","지수","용화","규석","동민","완상","재은","한아","진수","지수","용화","규석","동민","완상","재은","한아","진수","지수","용화","규석","동민","완상","재은"];
+  const use_names = names.slice(random_number, random_number+8);
+  const captions = use_names.concat("카이","스트","수학","대전");
+
+//   const captions = [
+//   "한아", //2
+//   "진수", //4
+//   "지수", //8
+//   "용화", //16
+//   "규석", //32
+//   "동민", //64
+//   "완상", //128
+//   "재은", //256
+//   "카이", //512
+//   "스트", //1024
+//   "수학", //2048
+//   "대전", //4096
+// ];
 
   // if(val <= 0) return "<span style='font-size:smaller'>Garbage</span>";
   // if(val == 1){
